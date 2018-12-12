@@ -35,3 +35,19 @@ void zeigeArrayInConsole(int * array, int anz) {
         printf("%d ", array[i]);
     return 0;
 }
+
+void dreicksTausch(int * array, int position) {
+    
+    int temp = array[position];
+    array[position] = array[position+1];
+    array[position+1]= temp;
+    return 0;
+    
+}
+void bubbleSort(int *z, int anz) {
+    
+    for (int d = 0; d < anz-1; d++) {
+        
+    }
+    
+}
