@@ -12,10 +12,10 @@ int main()
     int z[anz];
     
     erzeugerArray(z, anz);
-    printf("\nDas Array %d mit zufälligen Zahlen: \n", anz);
-    //bubbleSort (z, anz)
+    printf("Das Array mit %d zufälligen Zahlen: \n", anz);
+    bubbleSort (z, anz);
     zeigeArrayInConsole(z, anz);
-    printf("\nZeige %d in geordneter Reihenfolge: \n", anz);
+    printf("\nDas Array mit %d zufälligen Zahlen in geordneter Reihenfolge: \n", anz);
     zeigeArrayInConsole(z, anz);
     return 0;
 }
@@ -45,9 +45,19 @@ void dreicksTausch(int * array, int position) {
     
 }
 void bubbleSort(int *z, int anz) {
-    
+    int getauscht;
     for (int d = 0; d < anz-1; d++) {
-        
+        getauscht=0;
+        for(int v=0; v<anz-1-d;v++){
+            if(z[v]>z[v+1]){
+                dreicksTausch(z,v);
+                getauscht=1;
+            }
+        }
+        if(getauscht==0){
+            break;
+        }
     }
+    
     
 }
